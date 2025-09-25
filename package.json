@@ -1,0 +1,30 @@
+{
+  "name": "hacksmith",
+  "version": "1.0.0",
+  "description": "Development tools and utilities",
+  "packageManager": "yarn@4.10.3",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "prettier --check .",
+    "prepare": "husky"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "yarn": ">=4.0.0"
+  },
+  "devDependencies": {
+    "husky": "9.1.7",
+    "lint-staged": "16.2.0",
+    "prettier": "3.6.2",
+    "prettier-plugin-sh": "0.18.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,json,md,yml,yaml,html,css,scss,less}": [
+      "prettier --write"
+    ],
+    "*.sh": [
+      "prettier --write --parser sh"
+    ]
+  }
+}
